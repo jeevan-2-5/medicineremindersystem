@@ -9,17 +9,13 @@ This project helps users schedule and receive timely reminders for prescribed me
 ## Table of Contents
 
 * [Features](#features)
-* [Demo / Screenshots](#demo--screenshots)
 * [Tech Stack](#tech-stack)
-* [Installation](#installation)
 * [Usage](#usage)
 * [How it works (high level)](#how-it-works-high-level)
 * [Data model & storage](#data-model--storage)
 * [Caretaker alerts & doctor consultation](#caretaker-alerts--doctor-consultation)
-* [Privacy & Security](#privacy--security)
-* [Extending the project / Next steps](#extending-the-project--next-steps)
 * [Contributing](#contributing)
-* Managed
+* [Managed](#managed)
 
 ---
 
@@ -34,16 +30,6 @@ This project helps users schedule and receive timely reminders for prescribed me
 
 ---
 
-## Demo / Screenshots
-
-*(Replace these placeholders with actual screenshots or a link to a live demo if you have one.)*
-
-* `screenshots/add-medicine.png`
-* `screenshots/reminder-popup.png`
-* `screenshots/history-view.png`
-
----
-
 ## Tech Stack
 
 * HTML5
@@ -51,28 +37,7 @@ This project helps users schedule and receive timely reminders for prescribed me
 * JavaScript (ES6+)
 * Browser APIs used: `localStorage`, `Notification` API, `setInterval` / `setTimeout`
 * Service Worker (for background notifications / PWA behavior)
-* Simple backend (Node/Express) + third-party SMS/email provider (e.g., Twilio, SendGrid) to send caretaker alerts
-
----
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/medicine-reminder.git
-cd medicine-reminder
-```
-
-2. Open `index.html` in your browser (double-click or serve with a simple HTTP server):
-
-```bash
-# using Python 3
-python -m http.server 8000
-# then open http://localhost:8000
-```
-
-3. Grant notification permission when prompted so the app can show reminders.
+* Simple backend (Node/Express) + third-party SMS/email provider (e.g., Twilio, SendGrid) to send caretaker alerts.
 
 ---
 
@@ -165,24 +130,6 @@ fetch('/api/alert', {
 ### Exporting intake history for doctor consultation
 
 Provide an **Export CSV** button on the History page which converts the `history` array to CSV and triggers a download. Example fields: `date,time,medicine,dosage,status,notedAt`.
-
----
-
-## Privacy & Security
-
-* All patient data is stored locally by default (`localStorage`) — explain this to users and include a way to clear all data.
-* If you add a backend, always use HTTPS and never store third-party API keys in client code.
-* Be careful with personal contact data and comply with any regional privacy regulations if you plan to collect/store PII on a server.
-
----
-
-## Extending the project / Next steps
-
-* Convert to a Progressive Web App (PWA) with a Service Worker for background notifications and offline support.
-* Add a small Node/Express backend to reliably send caretaker alerts via SMS/email.
-* Add authentication (so multiple users can use the same device/account securely).
-* Add recurring rules (e.g., `every 8 hours`) and snooze functionality.
-* Add rich analytics: adherence rates, streaks, reminders acknowledged over time.
 
 ---
 
