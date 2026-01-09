@@ -15,9 +15,10 @@ public class MedicineReminderSystem {
     //  INSERT YOUR TWILIO CREDENTIALS BACK HERE
     // ------------------------------------------------------------
    
-    public static final String ACCOUNT_SID = "ACb38e8e3f256efb0b82208fbaef635f5a";
-    public static final String AUTH_TOKEN = "8107677030326e2ccc7bf3df673936f9";
-    public static final String FROM_NUMBER = "+18455529994";
+public static final String ACCOUNT_SID = System.getenv("TWILIO_SID");
+public static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH");
+public static final String FROM_NUMBER = System.getenv("TWILIO_FROM");
+
     // ------------------------------------------------------------
 
     static {
