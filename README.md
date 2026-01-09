@@ -1,6 +1,9 @@
 # Medicine Reminder System (Mini Project)
 
 **A simple, client-side medicine reminder app built with HTML, CSS, Java and JavaScript.**
+<img width="1080" height="1920" alt="image" src="https://github.com/user-attachments/assets/64e9acc2-f824-454e-b5d3-d4e38a540601" />
+
+
 
 This project helps users schedule and receive timely reminders for prescribed medicines via on-screen popups and browser notifications, keeps a persistent intake history, and can notify a caregiver or relative if a dose is missed. The app can also export intake history to help users consult with their doctor.
 
